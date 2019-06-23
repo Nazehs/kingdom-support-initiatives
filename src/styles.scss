@@ -1,0 +1,43 @@
+// /* You can add global styles to this file, and also import other style files */
+// html {
+//     font-size: 1rem;
+//     }
+    
+//     @include media-breakpoint-up(sm) {
+//     html {
+//     font-size: 1.2rem;
+//     }
+//     }
+    
+//     @include media-breakpoint-up(md) {
+//     html {
+//     font-size: 1.4rem;
+//     }
+//     }
+    
+//     @include media-breakpoint-up(lg) {
+//     html {
+//     font-size: 1.6rem;
+//     }
+//     }
+.carousel .carousel-control-prev-icon, .carousel .carousel-control-next-icon{
+    height: 63px!important;
+    width: 63px!important;
+    --height: 63px!important;
+    --width: 63px!important;
+    color: #777!important;
+    // background: #777;
+  }
+  .carousel-caption{
+      bottom:140px;
+  }
+  .input-errors{
+      color:#f44336!important;
+      margin-top: -14px;
+  }
+
+  @media screen and (max-width:650px){
+    mdb-navbar-brand{
+          display: none;
+      }
+  }

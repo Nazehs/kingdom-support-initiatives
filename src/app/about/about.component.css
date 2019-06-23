@@ -1,0 +1,24 @@
+.header-nav {
+  /* background: red; */
+  width: 100%;
+  /* height: 40px; */
+}
+.content-area{
+  padding: 0!important;
+  margin-bottom: 150px;
+  text-justify: auto
+  /* position: absolute!important; */
+}
+.container-fluid{
+  padding: 40px;
+}
+.row{
+  margin:0!important;
+}
+/* h5{
+  font-weight: 200;
+  font-size: 35px;
+} */
+/* h4{
+  display: block
+} */

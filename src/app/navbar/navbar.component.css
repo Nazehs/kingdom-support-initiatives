@@ -1,0 +1,58 @@
+.branding {
+  width: 50px;
+  height: 100%;
+}
+.branding img {
+  height: 100%;
+  width: 100%;
+}
+
+.nav-item a {
+  width: 100px;
+  text-align: center;
+}
+
+.nav-item.active > .nav-link {
+  color: brown;
+  background-color:none!important;
+}
+.navbar{
+  color:#777!important
+}
+mdb-navbar-brand
+{
+/* position: absolute; */
+    height: 51px;
+    width: 70px;
+    align-items: center;
+    align-content: center;
+    padding: 0;
+    margin-top: -13px;
+
+}
+mdb-navbar-brand img{
+  height: 100%;
+  width: 100%;
+}
+
+links a {
+  /* padding-right: 120px; */
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  /* padding-top: 8px; */
+  /* padding-bottom: 20px; */
+  letter-spacing: 0.10938rem;
+  font-family: "Montserrat", sans-serif;
+  color: #777!important;
+}
+links
+{
+  float: right!important;
+  text-align: right
+}
+
+.navbar-collapse {
+  /* flex-basis: 100%; */
+  flex-grow: 0!important;
+
+}

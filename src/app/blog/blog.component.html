@@ -1,0 +1,135 @@
+<div class="main-container">
+  <app-navbar></app-navbar>
+  <div class="content-container">
+    <div class="content-area">
+      <div class="row">
+        <div class="header-nav">
+          <!-- <div class="col-12 nav-text"> -->
+          <mdb-breadcrumb>
+            <mdb-breadcrumb-item class="active">Blog</mdb-breadcrumb-item>
+          </mdb-breadcrumb>
+          <!-- </div> -->
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="col-md-8 text-right subnav">
+          <p>
+            <a routerLink="/">Home</a> &nbsp; <mdb-icon fas icon="angle-right"></mdb-icon>&nbsp;
+            <a routerLink="/blog">
+              Blog
+            </a>
+          </p>
+        </div>
+      </div>
+      <div class="main-content">
+        <main class="container">
+          <section>
+            <h3 class="h3 text-center mb-5">Read Some of Our Blog Post</h3>
+            <!--Grid row-->
+            <div class="row wow fadeIn item-hover">
+              <!--Grid column-->
+              <div class="col-lg-6 col-md-12">
+                <div class="post-thumnail-big">
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-12 px-4">
+
+                <!--First row-->
+                <div class="row">
+                  <div class="col-12" *ngFor="let featured of featuredPost">
+                    <h4 class="feature-title">The Amazing Grace That Saves</h4>
+                    <p class="post-date">Date: {{featured.createdDate | date}} &nbsp; &nbsp; Author: {{featured.author}}
+                    </p>
+                    <div style="height:5px"></div>
+                    <p class="grey-text post-content">
+                      {{featured.content}}
+                    </p>
+                    <p>
+                      <button class="btn btn-sm read-more" (click)="readMore(featured.postid)">
+                        Read More &nbsp; <mdb-icon fas icon="angle-double-right"></mdb-icon>
+                      </button>
+                    </p>
+                  </div>
+                </div>
+                <!--/First row-->
+
+                <div style="height:30px"></div>
+              </div>
+              <!--/Grid column-->
+            </div>
+            <!--/Grid row-->
+
+          </section>
+          <!-- popular post row -->
+          <section class="popular-post-row">
+            <h4 class="h4 text-left mb-2">Popular Posts</h4>
+
+            <!--Grid row-->
+            <div class="row wow fadeIn">
+              <!--Grid column-->
+              <div class="col-lg-4 col-md-4 item-hover" *ngFor="let popularPost of popular">
+                <a routerLink="/single-post/{{popularPost.postid}}">
+                  <div class="post-thumnail-small">
+                  </div>
+                  <div class="popular-post-text">
+                    <h5 class="h5 ">{{popularPost.title}}</h5>
+                    <p class="text-gray-dark">{{popularPost.author}}</p>
+                  </div>
+                </a>
+                <!-- <p class="h5 text-center mb-4">Watch our "5 min Quick Start" tutorial</p> -->
+
+              </div>
+              <!--/Grid column-->
+
+            </div>
+            <!--/Grid row-->
+
+          </section>
+          <div style="height: 30px"></div>
+          <section class="popular-post-row">
+            <h5 class="h5 text-left mb-2">Recent Posts</h5>
+
+            <!--Grid row-->
+            <div class="row wow fadeIn">
+              <!--Grid column-->
+
+              <div class="col-lg-4 col-md-4 item-hover" *ngFor="let post of RecentPosts">
+                <hr>
+                <a routerLink="/single-post/{{post.postid}}">
+                <div class="row">
+                  
+                  <div class="post-thumnail-small-xs col-md-4">
+                  </div>
+                  <div class="recent-post-text col-md-8">
+                    <h5 class="h5 recent-title">{{post.title}}</h5>
+                    <p class="text-gray-dark text-left">{{post.author}}</p>
+                  </div>
+                </div>
+</a>
+              </div>
+              <!--/Grid column-->
+
+            </div>
+            <!--/Grid row-->
+            <div style="height: 18px"></div>
+            <!--/Grid row-->
+            <div style="height: 30px"></div>
+            <div class="row">
+              <div class="col-md-12 text-center">
+                <button class="btn btn-md read-more" (click)="navigateAllPost()">
+                  View More Post &nbsp; <mdb-icon fas icon="angle-double-right"></mdb-icon>
+                </button>
+              </div>
+            </div>
+
+          </section>
+          <div style="height: 30px"></div>
+        </main>
+      </div>
+    </div>
+  </div>
+  <!--Footer-->
+  <app-footer></app-footer>
+  <!--/.Footer-->
+</div>
